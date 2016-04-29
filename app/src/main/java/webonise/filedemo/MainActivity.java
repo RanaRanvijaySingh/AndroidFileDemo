@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
     @NonNull
     private File getFile() {
-        String directoryName = "/fileDemo";
-        String fileName = "message.txt";
-        File root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+        String directoryName = "/fileDemo/";
+        String fileName = "message1.txt";
+        File root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
         File directory = new File(root.getAbsolutePath() + directoryName);
         if (!directory.exists()) {
             directory.mkdir();
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }
         return new File(Environment.getExternalStoragePublicDirectory(Environment
-                .DIRECTORY_DOWNLOADS).getAbsolutePath() + directoryName + fileName);
+                .DIRECTORY_DCIM).getAbsolutePath() + directoryName + fileName);
     }
 
     /**
